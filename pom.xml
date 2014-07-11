@@ -491,5 +491,10 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>repository.springsource.milestone</id>
+            <name>SpringSource Milestone Repository</name>
+            <url>http://repo.springsource.org/milestone</url>
+        </repository>
     </repositories>
 </project>
