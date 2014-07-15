@@ -7,6 +7,7 @@ import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
 import com.kixeye.chassis.bootstrap.spring.ArchaiusSpringPropertySource;
+import com.kixeye.chassis.scala.transport.ScalaTransportConfiguration;
 import com.kixeye.chassis.support.ChassisConfiguration;
 import com.kixeye.core.scala.template.TemplateConfiguration;
 import com.kixeye.core.scala.template.service.dto.PingMessage;
@@ -130,7 +131,7 @@ public class TemplateTest {
         // start spring
         context.register(PropertySourcesPlaceholderConfigurer.class);
         context.register(TemplateConfiguration.class);
-        context.register(TransportConfiguration.class);
+        context.register(ScalaTransportConfiguration.class);
         context.register(ChassisConfiguration.class);
         context.refresh();
     }
