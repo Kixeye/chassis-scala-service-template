@@ -12,9 +12,9 @@ import com.kixeye.chassis.support.ChassisConfiguration
 @SpringApp(
   name = "ScalaTemplateService",
   propertiesResourceLocation = "classpath:/template-defaults.properties",
-  configurationClasses = Array(classOf[ChassisConfiguration],classOf[TransportConfiguration],classOf[TemplateConfiguration]),
+  configurationClasses = Array(classOf[ChassisConfiguration],classOf[ScalaTransportConfiguration],classOf[TemplateConfiguration]),
   webapp = true)
 @Configuration
-@ComponentScan(basePackageClasses = Array(classOf[TemplateConfiguration],classOf[ScalaTransportConfiguration]))
+@ComponentScan(basePackageClasses = Array(classOf[TemplateConfiguration]))
 class TemplateConfiguration {
 }
