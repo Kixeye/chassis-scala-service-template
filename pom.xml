@@ -41,6 +41,25 @@
         </extensions>
         <plugins>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1</version>
+                <configuration>
+                    <mainClass>com.kixeye.chassis.bootstrap.AppMain</mainClass>
+                    <arguments>
+                        <argument>-e</argument>
+                        <argument>local</argument>
+                        <argument>-si</argument>
+                    </arguments>
+                    <systemProperties>
+                        <systemProperty>
+                            <key>app.version</key>
+                            <value>${project.version}</value>
+                        </systemProperty>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.scala-tools</groupId>
                 <artifactId>maven-scala-plugin</artifactId>
                 <version>2.15.2</version>
